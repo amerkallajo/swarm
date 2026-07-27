@@ -4,9 +4,14 @@ SWARM is a consent-aware, evidence-driven acquisition system for a web design ag
 
 ## Current state
 
-Initialization and architecture documentation are complete. No real business has been scraped, contacted, or previewed. All outbound actions are disabled by default.
+Initialization and architecture documentation are complete. Issue #1 adds the local pnpm/Turborepo
+foundation: compileable TypeScript placeholders for `apps/dashboard`, `apps/worker`,
+`packages/config`, and `packages/domain`, plus deterministic quality commands. The dashboard and
+worker are intentionally inert; no real business has been scraped, contacted, or previewed, and no
+outbound integration exists in this bootstrap.
 
 Verified during initialization:
+
 - Local workspace was empty and was not an existing Git repository.
 - No older SWARM repository or code was found in the connected GitHub account.
 - GitHub CLI is authenticated as `amerkallajo` with repository/workflow access.
@@ -58,15 +63,33 @@ templates/previews
 docs
 ```
 
-## Development guardrails
+## Implemented layout
 
-```bash
-# Future bootstrap after Phase 1 approval
-corepack enable
-pnpm install
-pnpm lint
-pnpm typecheck
-pnpm test
+```text
+apps/dashboard     # deterministic dashboard placeholder
+apps/worker        # inert worker placeholder
+packages/config    # fail-closed outbound flag parsing
+packages/domain    # domain package placeholder
 ```
 
-Never put credentials in this repository. Copy `.env.example` to a local ignored file and use separate development/production credentials.
+The larger target layout above remains the architectural direction; packages are added only in the
+issue that implements them.
+
+## Development
+
+Use Node.js 24 or newer. This Windows host has an unusable Corepack shim, so invoke the repository's
+pinned package manager explicitly:
+
+```bash
+npx --yes pnpm@11.9.0 install --frozen-lockfile
+npx --yes pnpm@11.9.0 format:check
+npx --yes pnpm@11.9.0 lint
+npx --yes pnpm@11.9.0 typecheck
+npx --yes pnpm@11.9.0 test
+npx --yes pnpm@11.9.0 build
+npx --yes pnpm@11.9.0 check
+```
+
+`check` runs formatting, lint, typechecking, tests, and builds. Never put credentials in this
+repository. Copy `.env.example` to a local ignored file and use separate development/production
+credentials. The checked-in outbound defaults remain disabled and budgets remain zero.

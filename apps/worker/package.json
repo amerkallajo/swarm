@@ -1,0 +1,13 @@
+{
+  "name": "@swarm/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm --workspace-root exec tsc -p apps/worker/tsconfig.json",
+    "lint": "pnpm --workspace-root exec eslint apps/worker",
+    "typecheck": "pnpm --workspace-root exec tsc -p apps/worker/tsconfig.json --noEmit"
+  }
+}

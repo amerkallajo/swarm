@@ -1,0 +1,13 @@
+{
+  "name": "@swarm/dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm --workspace-root exec tsc -p apps/dashboard/tsconfig.json",
+    "lint": "pnpm --workspace-root exec eslint apps/dashboard",
+    "typecheck": "pnpm --workspace-root exec tsc -p apps/dashboard/tsconfig.json --noEmit"
+  }
+}
