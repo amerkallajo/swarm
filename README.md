@@ -93,3 +93,7 @@ npx --yes pnpm@11.9.0 check
 `check` runs formatting, lint, typechecking, tests, and builds. Never put credentials in this
 repository. Copy `.env.example` to a local ignored file and use separate development/production
 credentials. The checked-in outbound defaults remain disabled and budgets remain zero.
+
+Repository CI and security checks are documented in
+[`docs/BRANCH_PROTECTION.md`](docs/BRANCH_PROTECTION.md). Their presence does not authorize
+scraping, outreach, publishing, deployment, or paid resources.

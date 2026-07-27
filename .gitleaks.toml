@@ -1,0 +1,18 @@
+# Gitleaks configuration — focused defaults with synthetic canary rule.
+# No broad allowlists that could mask real credential leaks.
+#
+# The "synthetic-canary" rule is matched only against a runtime-generated
+# test string (never committed). It proves Gitleaks detection works.
+
+title = "SWARM Gitleaks config"
+
+[extend]
+# Inherit the upstream default ruleset
+useDefault = true
+
+# ── Custom rule: synthetic canary (runtime-only) ─────────────────────
+[[rules]]
+id = "synthetic-canary"
+description = "Detects the runtime-only SWARM_CANARY_TOKEN test pattern"
+regex = '''SWARM_CANARY_TOKEN=[A-Za-z0-9]{40}'''
+tags = ["test", "canary"]
