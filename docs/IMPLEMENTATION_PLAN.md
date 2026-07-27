@@ -2,45 +2,80 @@
 
 ## Goal
 
-Deliver a restartable, auditable, approval-gated system that can run a tiny shadow pilot before any real outreach.
+Reach one strong real prospect through a bounded, evidence-driven, approval-gated pilot while
+preserving the long-term restartable architecture as post-validation direction.
+
+## Current priority — fast-track pilot
+
+The immediate sequence is:
+
+1. minimal durable lead/evidence storage with source timestamps and duplicate-contact prevention;
+2. fixture-first bounded discovery for about 30 painting, renovation, and interior-finishing
+   businesses in Germany;
+3. activity validation for 15, concise website audits for 10, and deterministic pilot scoring;
+4. five evidence-backed leads presented to Amer and three exact German drafts;
+5. Amer-only Telegram approval shadow flow and Gmail draft-only/manual-send fallback;
+6. one real contact only after Amer approves the exact prospect, recipient, message, and channel;
+7. attempt recording, provider reconciliation, and reply monitoring.
+
+See [`FAST_TRACK_PILOT.md`](FAST_TRACK_PILOT.md). Full CRM, distributed infrastructure,
+multi-market expansion, automated follow-ups, advanced analytics, and preview automation are
+deferred unless they become a concrete blocker.
 
 ## Phase 0 — Initialization (complete)
 
-Inspect workspace/accounts, identify reusable assets, document architecture/schema/policies/costs, create backlog and establish a private repository. Verify no outreach or mass scraping occurred.
+Inspect workspace/accounts, identify reusable assets, document architecture/schema/policies/costs,
+create the backlog, and establish the repository. The repository was later made public under Amer's
+explicit approval to enable public-repository security features. Verify no outreach or mass scraping
+occurred.
 
-## Phase 1 — Safe foundation
+## Foundation already delivered
 
-Bootstrap pnpm/Turborepo, shared TypeScript/config packages, CI, secret scanning and tests. Create a separate development Supabase project after approval, migrations, RLS, status transition function, suppression, approval, job leasing and audit events. Implement global pause/shutdown and policy tests first.
+The pnpm/Turborepo foundation, strict TypeScript, protected CI, secret scanning, CodeQL, dependency
+review, and immutable fail-closed lead transition matrix are delivered. The larger database, queue,
+and enterprise-control layers are no longer prerequisites for beginning the bounded read-only pilot.
 
-Exit: database can prove that unapproved, duplicate, paused and suppressed sends are rejected.
+The minimum remaining safety foundation is durable pilot state, suppression and duplicate-contact
+prevention, payload-bound approvals, pause/shutdown, bounded budgets, and send reconciliation before
+the first real contact.
 
-## Phase 2 — Read-only discovery and auditing
+## Pilot phase 1 — Read-only discovery, validation, audit and scoring
 
-Build one tiny-source adapter using fixtures before any live Apify call. Implement canonicalization/dedupe, activity/contact validation, SSRF-safe fetch, Playwright/Lighthouse/axe audit, evidence storage, scoring v1 and operator lead view.
+Build one bounded source adapter using fixtures before any live Apify call. Implement only the
+canonicalization/dedupe, evidence provenance, activity/contact checks, safe fetching, concise
+business-impact audit, and simple 100-point score needed for the 30/15/10/5 funnel.
 
-Exit: a fixed test corpus produces reproducible evidence, scores and rejection reasons with no outbound side effects.
+Exit: a fixed test corpus and then a bounded read-only cohort produce reproducible evidence, scores,
+hard exclusions, and rejection reasons with no outbound side effects.
 
-## Phase 3 — Telegram and Gmail shadow mode
+## Pilot phase 2 — Approval and draft-only mode
 
-Configure the dedicated rotated Telegram bot and allowlist. Add approval inbox/commands. Configure Gmail OAuth with draft/read scopes; ingest synthetic or operator-owned test threads. Generate drafts but do not send.
+Configure a dedicated rotated Telegram bot only when its identity and Amer's allowlisted IDs are
+verified. Implement the compact pilot commands and approval cards. Configure Gmail with read/draft
+scope or produce an exact manual-send artifact. Generate drafts but do not send.
 
 Exit: approvals are payload-bound/expiring, opt-outs suppress immediately, and shadow drafts pass factual/policy review.
 
-## Phase 4 — Controlled pilot
+## Pilot phase 3 — One controlled contact
 
-After market/legal approval, enable a tiny manually selected cohort. Every first send has two human checks (lead and exact draft), strict daily/domain caps, one follow-up maximum and real-time reconciliation.
+After market/legal identity and jurisdiction gates, ask Amer to approve one exact business,
+recipient, message, and channel. Create one immutable intent, contact once, persist provider evidence,
+and reconcile uncertainty before any retry. No automatic second prospect or follow-up.
 
-Exit: zero policy violations/duplicates, acceptable bounce/complaint rates and documented quality review.
+Exit: one professional contact is recorded without duplication, reply monitoring exists, and the
+result is reviewed before any expansion.
 
-## Phase 5 — Preview pipeline
+## Pilot phase 4 — Preview only after interest
 
-Create vetted templates, asset provenance, concept labels, QA budgets, immutable builds and expiring Netlify deploys. Use only interested leads with create/publish/send approvals.
+For the first prospect who expresses interest, create one high-impact unofficial homepage concept
+with licensed assets, `noindex`, bounded lifetime, and separate create/publish/send approvals.
 
 Exit: a synthetic preview passes QA and teardown; then one real interested lead may be approved.
 
-## Phase 6 — Optimization
+## Post-validation architecture and optimization
 
-Calibrate scoring against outcomes, test message variants, add cost-per-stage reporting and selectively automate low-risk approvals only after measured safety.
+Resume deferred database breadth, queues, CRM, multi-tenancy, preview automation, additional markets,
+analytics, and selective low-risk automation only after measured pilot evidence justifies them.
 
 ## Verification strategy
 
@@ -48,4 +83,7 @@ Unit tests for score/policy/state transitions; property tests for illegal transi
 
 ## Autonomous work allowed now
 
-Repository/tooling bootstrap, domain types, local migrations, deterministic policy/state-machine tests, fixture-based discovery/audit/scoring, dashboard skeleton, redaction, cost ledger, synthetic preview templates and CI—without external sends, live scraping, paid resources or real-business artifacts.
+Pilot documentation, minimal durable schema, fixture discovery, bounded read-only collection,
+activity validation, evidence-backed auditing/scoring, synthetic Telegram approval cards, and exact
+draft generation—without external sends, mass scraping, paid resources, public deployment, or
+real-business previews. Real contact remains separately approval-gated.

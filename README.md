@@ -2,13 +2,26 @@
 
 SWARM is a consent-aware, evidence-driven acquisition system for a web design agency. It discovers and validates businesses, audits websites, ranks opportunities, drafts personalized outreach, coordinates human approvals, and builds concept previews only after demonstrated interest.
 
+## Fast-track pilot
+
+The immediate objective is a thin, controlled vertical slice: discover about 30 candidates, validate
+15, audit 10, present five, draft for three, and contact exactly one real prospect only after Amer
+approves the exact business, recipient, message, and channel. Work that does not directly advance
+that objective is deferred unless it prevents a serious security, compliance, credential,
+duplication, or data-loss risk.
+
+The initial read-only discovery slice targets established painting, renovation, and
+interior-finishing businesses in Germany, with German outreach drafts. The broader architecture is
+preserved as post-validation direction. See
+[`docs/FAST_TRACK_PILOT.md`](docs/FAST_TRACK_PILOT.md) and
+[GitHub Issue #26](https://github.com/amerkallajo/swarm/issues/26).
+
 ## Current state
 
-Initialization and architecture documentation are complete. Issue #1 adds the local pnpm/Turborepo
-foundation: compileable TypeScript placeholders for `apps/dashboard`, `apps/worker`,
-`packages/config`, and `packages/domain`, plus deterministic quality commands. The dashboard and
-worker are intentionally inert; no real business has been scraped, contacted, or previewed, and no
-outbound integration exists in this bootstrap.
+Initialization, the pnpm/Turborepo foundation, protected CI/security workflows, and the immutable
+fail-closed lead transition matrix are implemented. The dashboard and worker remain inert. No pilot
+business has been discovered, audited, contacted, or previewed; no Telegram, Gmail, Apify, database,
+or outbound integration is active.
 
 Verified during initialization:
 
@@ -29,6 +42,9 @@ Potentially reusable work exists in private repositories: website audit/checklis
 - Opt-outs and blacklists override every workflow.
 - Sensitive professions, new markets, pricing, timelines, previews, and strategy changes require human approval.
 - The system never claims observations it cannot cite.
+- The GitHub repository is public under Amer's explicit approval so public-repository CodeQL,
+  dependency review, secret scanning, and protected-branch controls remain available.
+- Any credential exposed in chat, logs, screenshots, issues, or commits must be rotated before use.
 
 ## Proposed stack
 
@@ -38,7 +54,9 @@ Start with a modular monolith and one worker. Split services only when load or o
 
 ## Documentation
 
-See `docs/` for vision, architecture, integrations, schema, scoring, outreach, previews, Telegram control, security, compliance, costs, implementation phases, and decisions. The first 20 tasks are also in `BACKLOG.md`.
+See `docs/` for the fast-track pilot, long-term architecture, integrations, schema, scoring, outreach,
+previews, Telegram control, security, compliance, costs, implementation phases, and decisions. The
+original long-term tasks remain in `BACKLOG.md`; Issue #26 is the pilot execution epic.
 
 ## Repository layout (target)
 
@@ -69,7 +87,7 @@ docs
 apps/dashboard     # deterministic dashboard placeholder
 apps/worker        # inert worker placeholder
 packages/config    # fail-closed outbound flag parsing
-packages/domain    # domain package placeholder
+packages/domain    # immutable lead states, commands, actors, and transition decisions
 ```
 
 The larger target layout above remains the architectural direction; packages are added only in the
