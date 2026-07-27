@@ -1,0 +1,14 @@
+{
+  "name": "@swarm/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm --workspace-root exec tsc -p packages/domain/tsconfig.json",
+    "lint": "pnpm --workspace-root exec eslint packages/domain",
+    "test": "node --test test/*.test.mjs",
+    "typecheck": "pnpm --workspace-root exec tsc -p packages/domain/tsconfig.json --noEmit"
+  }
+}

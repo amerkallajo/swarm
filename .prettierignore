@@ -1,0 +1,12 @@
+.env
+.env.*
+.git
+.next
+.turbo
+coverage
+dist
+docs/INTEGRATIONS.md
+docs/LEAD_SCORING.md
+node_modules
+playwright-report
+test-results
