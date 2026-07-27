@@ -9,10 +9,10 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "check": "prettier --check . && turbo run lint typecheck test build",
+    "check": "prettier --check . && node --test tests/ci-validate.test.mjs && turbo run lint typecheck test build",
     "format:check": "prettier --check .",
     "lint": "turbo run lint",
-    "test": "turbo run test",
+    "test": "node --test tests/ci-validate.test.mjs && turbo run test",
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
