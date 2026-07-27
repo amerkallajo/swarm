@@ -35,9 +35,21 @@ importers:
 
   packages/config: {}
 
+  packages/database:
+    devDependencies:
+      "@electric-sql/pglite":
+        specifier: 0.5.4
+        version: 0.5.4
+
   packages/domain: {}
 
 packages:
+  "@electric-sql/pglite@0.5.4":
+    resolution:
+      {
+        integrity: sha512-yYZUyyXrHU7tPlCjwZQJ6hIG9DscdCCn7Uk0mYKwC1FeHX286AbcmFveMiRBEak8e9iPupjsoVImN3yJZVed2g==,
+      }
+
   "@eslint-community/eslint-utils@4.10.1":
     resolution:
       {
@@ -760,6 +772,8 @@ packages:
     engines: { node: ">=10" }
 
 snapshots:
+  "@electric-sql/pglite@0.5.4": {}
+
   "@eslint-community/eslint-utils@4.10.1(eslint@10.8.0)":
     dependencies:
       eslint: 10.8.0

@@ -10,18 +10,19 @@ approves the exact business, recipient, message, and channel. Work that does not
 that objective is deferred unless it prevents a serious security, compliance, credential,
 duplication, or data-loss risk.
 
-The initial read-only discovery slice targets established painting, renovation, and
-interior-finishing businesses in Germany, with German outreach drafts. The broader architecture is
-preserved as post-validation direction. See
+The read-only discovery slice is opportunity-led worldwide across lawful professions where a simple
+lead-generation or appointment-booking website has clear commercial value. German, English, and
+Arabic are supported; market and vertical selection follows evidence and revenue potential. The
+broader architecture is preserved as post-validation direction. See
 [`docs/FAST_TRACK_PILOT.md`](docs/FAST_TRACK_PILOT.md) and
 [GitHub Issue #26](https://github.com/amerkallajo/swarm/issues/26).
 
 ## Current state
 
-Initialization, the pnpm/Turborepo foundation, protected CI/security workflows, and the immutable
-fail-closed lead transition matrix are implemented. The dashboard and worker remain inert. No pilot
-business has been discovered, audited, contacted, or previewed; no Telegram, Gmail, Apify, database,
-or outbound integration is active.
+Initialization, the pnpm/Turborepo foundation, protected CI/security workflows, the immutable
+fail-closed lead transition matrix, and the isolated pilot database package are implemented. The
+dashboard and worker remain inert. No pilot business has been discovered, audited, contacted, or
+previewed; no Supabase project, Telegram, Gmail, Apify, or outbound integration is active.
 
 Verified during initialization:
 
@@ -87,6 +88,7 @@ docs
 apps/dashboard     # deterministic dashboard placeholder
 apps/worker        # inert worker placeholder
 packages/config    # fail-closed outbound flag parsing
+packages/database  # tested forward-only PostgreSQL pilot schema and typed vocabularies
 packages/domain    # immutable lead states, commands, actors, and transition decisions
 ```
 
