@@ -24,7 +24,11 @@ Structured logs redact credentials, authorization headers, cookies, email bodies
 
 ## Supply-chain and repository controls
 
-Private repository, branch protection, pull-request checks, Gitleaks, dependency review, code scanning, artifact retention limits and no secrets in GitHub Actions output. Preview repositories/assets inherit the same rules.
+The SWARM repository is public under Amer's explicit approval. No credentials, private lead data,
+personal data, provider payloads or unpublished prospect artifacts may be committed. Branch
+protection, pull-request checks, Gitleaks, dependency review, code scanning, push protection,
+artifact retention limits and redacted Actions output remain required. Preview repositories/assets
+inherit the same rules.
 
 ## Limits
 
