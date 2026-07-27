@@ -16,13 +16,13 @@ If not, defer it unless it is a necessary safety gate.
 
 ## Pilot boundary
 
-### Initial market
+### Opportunity-led market selection
 
-- **First discovery slice:** Germany, then nearby German-speaking DACH markets only if the Germany cohort lacks sufficient quality. This keeps the first German outreach drafts and jurisdiction review bounded instead of treating “anywhere” as one legal market.
-- **Languages supported for evidence review:** German, English, and Arabic.
-- **Initial vertical:** established local painting, renovation, and interior-finishing businesses.
+- **Discovery scope:** worldwide read-only discovery across lawful professions. Compare a few narrow market/vertical cohorts and select the first pilot cohort from evidence of revenue potential rather than geography or trade by default.
+- **Languages supported for evidence review and drafts:** German, English, and Arabic.
+- **Preferred opportunity:** established businesses for which a simple lead-generation or appointment-booking website can improve enquiries, quote requests, calls, WhatsApp conversations, or bookings.
 - **Business profile:** active owner-operated businesses or small-to-medium teams with clear commercial activity, a working public contact route, and plausible ability to purchase a professional website.
-- **Expansion:** other countries, languages, and industries are post-validation unless read-only evidence shows the initial slice cannot produce the required cohort.
+- **Pilot focus:** after comparison, keep validation, jurisdiction review, drafting, and any later contact bounded to the strongest selected cohort. Broad expansion remains post-validation.
 
 Country and language selection here authorizes **read-only research only**. Real outreach still requires Amer’s approval of the exact prospect, recipient, message, and channel, plus the applicable legal/compliance gate.
 
@@ -34,7 +34,7 @@ Country and language selection here authorizes **read-only research only**. Real
 | Activity-validated businesses |                           best 15 |
 | Fully audited websites        |                           best 10 |
 | Leads presented to Amer       |        best 5 scoring at least 65 |
-| Exact German drafts           |                            best 3 |
+| Exact localized drafts        |                            best 3 |
 | Initial real contacts         | exactly 1 after explicit approval |
 
 No mass scraping, bulk email, automatic multi-prospect contact, or automatic follow-up is allowed.
@@ -93,9 +93,9 @@ The scoring model totals 100 points:
 
 Hard exclusions and suppression override the score. Only businesses scoring **65 or higher** may be presented. Each score must explain selection, observed website weaknesses, likely redesign value, activity evidence, commercial fit evidence, and available contact route. Protected traits and unsupported inferences are prohibited.
 
-### E. Personalized German draft
+### E. Personalized localized draft
 
-The first message must be short, honest, and specific. It mentions one or two observed facts without insulting the current site or using generic praise. It may offer a free redesign concept and must say there is no contract, upfront payment, obligation, or commitment to purchase; pricing is discussed only if they like the concept. It includes a simple decline path and no fake urgency, guarantees, fake familiarity, or claim that an unbuilt concept already exists.
+The first message uses the selected prospect's appropriate supported language and must be short, honest, and specific. It mentions one or two observed facts without insulting the current site or using generic praise. It may offer a free redesign concept and must say there is no contract, upfront payment, obligation, or commitment to purchase; pricing is discussed only if they like the concept. It includes a simple decline path and no fake urgency, guarantees, fake familiarity, or claim that an unbuilt concept already exists.
 
 ### F. Telegram approval shadow flow
 
@@ -149,7 +149,7 @@ A preview is not a prerequisite for first contact. If the contacted prospect exp
 - distributed services, browser farms, and high-scale queues;
 - advanced dead-letter and analytics infrastructure;
 - automated follow-up campaigns or autonomous sending;
-- multi-country, multi-language, or multi-industry expansion;
+- broad rollout beyond the single evidence-selected pilot cohort or beyond the supported languages;
 - automated pricing, contracts, negotiation, or full preview generation;
 - machine-learning scoring and paid enrichment.
 
@@ -163,7 +163,7 @@ The existing architecture documents remain the long-term direction, not the pilo
 4. Add activity validation, concise audit, and pilot scoring.
 5. Produce the bounded candidate dataset and present five evidence-backed leads.
 6. Add Amer-only Telegram approval shadow controls.
-7. Generate three exact German drafts.
+7. Generate three exact localized drafts in the selected market's supported language.
 8. Add Gmail draft-only mode or the manual-send fallback.
 9. Ask Amer to approve one exact prospect, recipient, message, and channel.
 10. Contact once, record/reconcile the attempt, and monitor the reply.
@@ -171,7 +171,7 @@ The existing architecture documents remain the long-term direction, not the pilo
 
 ## Definition of success
 
-The pilot is complete only when at least 30 businesses are discovered, 15 validated, 10 audited, five qualified leads are presented, three German drafts exist, Telegram approval is tested, one exact Gmail draft **or exact manual-send artifact** is approved, one real prospect is contacted after explicit approval, the attempt is recorded without duplication, and reply monitoring exists.
+The pilot is complete only when at least 30 businesses are discovered, 15 validated, 10 audited, five qualified leads are presented, three localized drafts exist, Telegram approval is tested, one exact Gmail draft **or exact manual-send artifact** is approved, one real prospect is contacted after explicit approval, the attempt is recorded without duplication, and reply monitoring exists.
 
 ## Status reporting
 
