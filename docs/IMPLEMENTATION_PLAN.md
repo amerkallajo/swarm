@@ -10,17 +10,17 @@ preserving the long-term restartable architecture as post-validation direction.
 The immediate sequence is:
 
 1. minimal durable lead/evidence storage with source timestamps and duplicate-contact prevention;
-2. fixture-first bounded discovery for about 30 painting, renovation, and interior-finishing
-   businesses in Germany;
+2. fixture-first worldwide opportunity comparison followed by a bounded cohort of about 30
+   businesses in the strongest evidence-selected market and lawful vertical;
 3. activity validation for 15, concise website audits for 10, and deterministic pilot scoring;
-4. five evidence-backed leads presented to Amer and three exact German drafts;
+4. five evidence-backed leads presented to Amer and three exact localized DE/EN/AR drafts;
 5. Amer-only Telegram approval shadow flow and Gmail draft-only/manual-send fallback;
 6. one real contact only after Amer approves the exact prospect, recipient, message, and channel;
 7. attempt recording, provider reconciliation, and reply monitoring.
 
-See [`FAST_TRACK_PILOT.md`](FAST_TRACK_PILOT.md). Full CRM, distributed infrastructure,
-multi-market expansion, automated follow-ups, advanced analytics, and preview automation are
-deferred unless they become a concrete blocker.
+See [`FAST_TRACK_PILOT.md`](FAST_TRACK_PILOT.md). Full CRM, distributed infrastructure, broad
+rollout beyond the selected pilot cohort, automated follow-ups, advanced analytics, and preview
+automation are deferred unless they become a concrete blocker.
 
 ## Phase 0 — Initialization (complete)
 
