@@ -37,7 +37,7 @@ Use a TypeScript monorepo and a modular monolith with two deployables: an operat
 
 ## State machine
 
-Canonical statuses: `DISCOVERED`, `VALIDATING`, `REJECTED`, `QUALIFIED`, `AWAITING_APPROVAL`, `APPROVED_FOR_OUTREACH`, `CONTACTED`, `REPLIED`, `INTERESTED`, `PREVIEW_PLANNED`, `PREVIEW_IN_PROGRESS`, `PREVIEW_REVIEW`, `PREVIEW_SENT`, `NEGOTIATING`, `WON`, `LOST`, `DO_NOT_CONTACT`, `FOLLOW_UP_LATER`.
+Canonical statuses: `DISCOVERED`, `VALIDATING`, `REJECTED`, `QUALIFIED`, `AWAITING_APPROVAL`, `APPROVED_FOR_OUTREACH`, `CONTACTED`, `REPLIED`, `INTERESTED`, `PREVIEW_PLANNED`, `PREVIEW_IN_PROGRESS`, `PREVIEW_REVIEW`, `PREVIEW_SEND_APPROVED`, `PREVIEW_SENT`, `NEGOTIATING`, `WON`, `LOST`, `DO_NOT_CONTACT`, `FOLLOW_UP_LATER`.
 
 Transitions are commands validated by a transition table. Terminal suppression states cannot transition to outreach states. Every transition writes an append-only event with actor, reason, evidence and correlation ID in the same transaction as the current-state update.
 

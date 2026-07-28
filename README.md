@@ -10,19 +10,22 @@ approves the exact business, recipient, message, and channel. Work that does not
 that objective is deferred unless it prevents a serious security, compliance, credential,
 duplication, or data-loss risk.
 
-The read-only discovery slice is opportunity-led worldwide across lawful professions where a simple
-lead-generation or appointment-booking website has clear commercial value. German, English, and
-Arabic are supported; market and vertical selection follows evidence and revenue potential. The
-broader architecture is preserved as post-validation direction. See
+The broader read-only strategy is opportunity-led worldwide, and its first bounded source test is
+independent premium automotive detailing and ceramic-coating studios in Riyadh and Jeddah.
+Arabic-first and bilingual evidence is preserved. The cohort is a hypothesis, not outreach
+authorization, and the broader architecture remains post-validation direction. See
 [`docs/FAST_TRACK_PILOT.md`](docs/FAST_TRACK_PILOT.md) and
-[GitHub Issue #26](https://github.com/amerkallajo/swarm/issues/26).
+[GitHub Issues #26](https://github.com/amerkallajo/swarm/issues/26) and
+[#31](https://github.com/amerkallajo/swarm/issues/31).
 
 ## Current state
 
 Initialization, the pnpm/Turborepo foundation, protected CI/security workflows, the immutable
-fail-closed lead transition matrix, and the isolated pilot database package are implemented. The
-dashboard and worker remain inert. No pilot business has been discovered, audited, contacted, or
-previewed; no Supabase project, Telegram, Gmail, Apify, or outbound integration is active.
+fail-closed lead transition matrix, isolated pilot database package, and bounded fixture-first
+OpenStreetMap discovery package are implemented. The dashboard and worker remain inert. Real
+discovery artifacts stay in ignored local storage; no business has been validated, audited,
+contacted, or previewed, and no Supabase project, Telegram, Gmail, Apify, or outbound integration is
+active.
 
 Verified during initialization:
 
@@ -32,7 +35,7 @@ Verified during initialization:
 - Netlify CLI is authenticated; three unrelated sites exist, and SWARM is not linked.
 - Supabase CLI can access one unrelated project; SWARM has no project.
 - No Gmail integration or Apify CLI/environment credential is configured for SWARM.
-- The existing Hermes Telegram credential belongs to `@ccclowdbot`, has no candidate chat, and is not assumed to be the dedicated SWARM bot.
+- Any integration credential previously exposed in chat is compromised and must not be used.
 
 Potentially reusable work exists in private repositories: website audit/checklist patterns from `econicmedia`, schema validation and fail-closed storage patterns from `cheflight`, and Netlify configuration patterns from `tatiana-garder-steuerberatung`. Reuse requires extraction and review; no code was copied during initialization.
 
@@ -89,6 +92,7 @@ apps/dashboard     # deterministic dashboard placeholder
 apps/worker        # inert worker placeholder
 packages/config    # fail-closed outbound flag parsing
 packages/database  # tested forward-only PostgreSQL pilot schema and typed vocabularies
+packages/discovery # bounded fixture/live OSM discovery, normalization, evidence, and reports
 packages/domain    # immutable lead states, commands, actors, and transition decisions
 ```
 
@@ -108,6 +112,8 @@ npx --yes pnpm@11.9.0 typecheck
 npx --yes pnpm@11.9.0 test
 npx --yes pnpm@11.9.0 build
 npx --yes pnpm@11.9.0 check
+npx --yes pnpm@11.9.0 pilot:discover
+npx --yes pnpm@11.9.0 pilot:report
 ```
 
 `check` runs formatting, lint, typechecking, tests, and builds. Never put credentials in this
