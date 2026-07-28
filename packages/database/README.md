@@ -2,11 +2,14 @@
 
 Canonical forward-only PostgreSQL/Supabase schema for the thin SWARM pilot data model.
 
-`migrations/0001_pilot_data_model.sql` creates only the 11 pilot tables. Application code supplies
+The forward migrations create only the 11 pilot tables. Application code supplies
 UUIDs and timestamps. The schema retains worldwide source/location/language provenance, constrains
 evidence-backed scores, binds approvals to exact immutable draft artifacts, and accepts only
 approved, unsuppressed contact intents. It enables plus forces RLS without creating browser/public
 policies.
+
+The second migration preserves an explicit `unknown` language rather than guessing and records
+WhatsApp as its exact channel instead of collapsing it into `OTHER`.
 
 Businesses, websites, contacts, lead evidence, audit findings, lead scores, outreach drafts,
 suppressions, and activity events are append-only records. Business source and normalized identity,

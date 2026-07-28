@@ -4,10 +4,14 @@ import test from "node:test";
 
 import { PGlite } from "@electric-sql/pglite";
 
-const MIGRATION_SQL = await readFile(
-  new URL("../migrations/0001_pilot_data_model.sql", import.meta.url),
-  "utf8",
-);
+const MIGRATION_SQL = (
+  await Promise.all(
+    [
+      "../migrations/0001_pilot_data_model.sql",
+      "../migrations/0002_pilot_unknown_language_whatsapp.sql",
+    ].map((path) => readFile(new URL(path, import.meta.url), "utf8")),
+  )
+).join("\n");
 
 const uuid = (number) => `00000000-0000-4000-8000-${String(number).padStart(12, "0")}`;
 const hash = (number) => number.toString(16).padStart(64, "0");

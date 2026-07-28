@@ -15,4 +15,4 @@ Thumbs.db
 .netlify/
 .supabase/
 artifacts/private/
-.var/pilot/discovery/
+.var/pilot/

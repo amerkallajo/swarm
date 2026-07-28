@@ -94,6 +94,7 @@ packages/config    # fail-closed outbound flag parsing
 packages/database  # tested forward-only PostgreSQL pilot schema and typed vocabularies
 packages/discovery # bounded fixture/live OSM discovery, normalization, evidence, and reports
 packages/domain    # immutable lead states, commands, actors, and transition decisions
+packages/pilot     # local validation, audit import, evidence-bound scoring, and unsent drafts
 ```
 
 The larger target layout above remains the architectural direction; packages are added only in the
@@ -113,12 +114,17 @@ npx --yes pnpm@11.9.0 test
 npx --yes pnpm@11.9.0 build
 npx --yes pnpm@11.9.0 check
 npx --yes pnpm@11.9.0 pilot:discover
+npx --yes pnpm@11.9.0 pilot:validate
+npx --yes pnpm@11.9.0 pilot:audit -- --manual .var/pilot/audit/import/reviewed-audits.json
+npx --yes pnpm@11.9.0 pilot:score
+npx --yes pnpm@11.9.0 pilot:draft
 npx --yes pnpm@11.9.0 pilot:report
 ```
 
 `check` runs formatting, lint, typechecking, tests, and builds. Never put credentials in this
 repository. Copy `.env.example` to a local ignored file and use separate development/production
 credentials. The checked-in outbound defaults remain disabled and budgets remain zero.
+Real discovery, audit, score, and draft artifacts stay under the ignored `.var/pilot/` directory.
 
 Repository CI and security checks are documented in
 [`docs/BRANCH_PROTECTION.md`](docs/BRANCH_PROTECTION.md). Their presence does not authorize

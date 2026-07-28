@@ -16,10 +16,16 @@ export const PILOT_TABLES = freeze([
 
 export type PilotTable = (typeof PILOT_TABLES)[number];
 
-export const CONTACT_ROUTE_TYPES = freeze(["EMAIL", "PHONE", "CONTACT_FORM", "OTHER"] as const);
+export const CONTACT_ROUTE_TYPES = freeze([
+  "EMAIL",
+  "PHONE",
+  "WHATSAPP",
+  "CONTACT_FORM",
+  "OTHER",
+] as const);
 export type ContactRouteType = (typeof CONTACT_ROUTE_TYPES)[number];
 
-export const PILOT_LANGUAGES = freeze(["de", "en", "ar"] as const);
+export const PILOT_LANGUAGES = freeze(["de", "en", "ar", "unknown"] as const);
 export type PilotLanguage = (typeof PILOT_LANGUAGES)[number];
 
 export const LEAD_EVIDENCE_SIGNAL_TYPES = freeze([
