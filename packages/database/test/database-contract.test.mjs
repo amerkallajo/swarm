@@ -6,10 +6,14 @@ import { PGlite } from "@electric-sql/pglite";
 
 import * as database from "../src/index.ts";
 
-const MIGRATION_SQL = await readFile(
-  new URL("../migrations/0001_pilot_data_model.sql", import.meta.url),
-  "utf8",
-);
+const MIGRATION_SQL = (
+  await Promise.all(
+    [
+      "../migrations/0001_pilot_data_model.sql",
+      "../migrations/0002_pilot_unknown_language_whatsapp.sql",
+    ].map((path) => readFile(new URL(path, import.meta.url), "utf8")),
+  )
+).join("\n");
 const uuid = (number) => `10000000-0000-4000-8000-${String(number).padStart(12, "0")}`;
 const hash = (number) => number.toString(16).padStart(64, "0");
 
@@ -76,8 +80,8 @@ test("exports captured-frozen canonical tables and finite vocabularies", () => {
       "suppressions",
       "activity_events",
     ],
-    CONTACT_ROUTE_TYPES: ["EMAIL", "PHONE", "CONTACT_FORM", "OTHER"],
-    PILOT_LANGUAGES: ["de", "en", "ar"],
+    CONTACT_ROUTE_TYPES: ["EMAIL", "PHONE", "WHATSAPP", "CONTACT_FORM", "OTHER"],
+    PILOT_LANGUAGES: ["de", "en", "ar", "unknown"],
     LEAD_EVIDENCE_SIGNAL_TYPES: [
       "PUBLIC_LISTING",
       "RECENT_REVIEW",

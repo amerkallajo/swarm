@@ -49,6 +49,22 @@ importers:
 
   packages/domain: {}
 
+  packages/pilot:
+    dependencies:
+      "@electric-sql/pglite":
+        specifier: 0.5.4
+        version: 0.5.4
+      "@swarm/database":
+        specifier: workspace:*
+        version: link:../database
+      "@swarm/discovery":
+        specifier: workspace:*
+        version: link:../discovery
+    devDependencies:
+      "@types/node":
+        specifier: 24.0.10
+        version: 24.0.10
+
 packages:
   "@electric-sql/pglite@0.5.4":
     resolution:
