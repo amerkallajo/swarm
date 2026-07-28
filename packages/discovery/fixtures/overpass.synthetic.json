@@ -1,0 +1,104 @@
+{
+  "version": 0.6,
+  "generator": "swarm-synthetic-fixture",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-28T00:00:00Z",
+    "copyright": "Synthetic fixture; not real OpenStreetMap data"
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 1001,
+      "lat": 24.7,
+      "lon": 46.7,
+      "timestamp": "2026-07-27T12:00:00Z",
+      "version": 1,
+      "changeset": 1,
+      "tags": {
+        "name": "مركز تجريبي للسيراميك",
+        "name:ar": "مركز تجريبي للسيراميك",
+        "name:en": "Synthetic Ceramic Studio",
+        "shop": "car_repair",
+        "service": "ceramic coating",
+        "website": "https://riyadh-fixture.swarm-fixture.sa/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1001,
+      "lat": 24.7,
+      "lon": 46.7,
+      "timestamp": "2026-07-27T12:00:00Z",
+      "version": 1,
+      "changeset": 1,
+      "tags": {
+        "name": "مركز تجريبي للسيراميك",
+        "name:ar": "مركز تجريبي للسيراميك",
+        "name:en": "Synthetic Ceramic Studio",
+        "shop": "car_repair",
+        "service": "ceramic coating",
+        "website": "https://riyadh-fixture.swarm-fixture.sa/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1002,
+      "lat": 21.5,
+      "lon": 39.2,
+      "timestamp": "2026-07-27T12:05:00Z",
+      "version": 1,
+      "changeset": 2,
+      "tags": {
+        "name": "Synthetic Jeddah Detailing",
+        "name:en": "Synthetic Jeddah Detailing",
+        "amenity": "car_wash",
+        "service": "detailing",
+        "website": "https://jeddah-fixture.swarm-fixture.sa/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1003,
+      "lat": 24.71,
+      "lon": 46.71,
+      "timestamp": "2026-07-27T12:10:00Z",
+      "version": 1,
+      "changeset": 3,
+      "tags": {
+        "name": "Synthetic Ordinary Wash",
+        "amenity": "car_wash",
+        "website": "https://ordinary-fixture.swarm-fixture.sa/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1004,
+      "lat": 21.51,
+      "lon": 39.21,
+      "timestamp": "2026-07-27T12:15:00Z",
+      "version": 1,
+      "changeset": 4,
+      "tags": {
+        "name": "Synthetic Chain Ceramic",
+        "shop": "car_repair",
+        "service": "ceramic coating",
+        "brand": "Synthetic Chain",
+        "website": "https://chain-fixture.swarm-fixture.sa/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1005,
+      "lat": 24.72,
+      "lon": 46.72,
+      "timestamp": "2026-07-27T12:20:00Z",
+      "version": 1,
+      "changeset": 5,
+      "tags": {
+        "name": "",
+        "shop": "car_repair",
+        "service": "detailing"
+      }
+    }
+  ]
+}

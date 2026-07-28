@@ -693,10 +693,11 @@ test("inserts one approved synthetic path through all 11 tables without outbound
     VALUES
       ('${ids.approval}', 'DRAFT_APPROVAL', '${ids.business}', '${ids.draft}',
        '${ids.draft}', '${payloadHash}', '${recipientHash}', 'EMAIL', 'PENDING',
-       'fixture-operator', NULL, '2026-07-01T05:00:00Z', NULL,
-       '2099-01-01T00:00:00Z', 'Review exact artifact');
+       'fixture-operator', NULL, clock_timestamp() - interval '2 minutes', NULL,
+       clock_timestamp() + interval '1 hour', 'Review exact artifact');
     UPDATE approvals
-    SET status = 'APPROVED', approver = 'amer', decided_at = '2026-07-01T06:00:00Z'
+    SET status = 'APPROVED', approver = 'amer',
+        decided_at = clock_timestamp() - interval '1 minute'
     WHERE id = '${ids.approval}';
     INSERT INTO contact_attempts
       (id, business_id, contact_id, draft_id, approval_id, payload_hash, recipient_hash,
@@ -706,7 +707,7 @@ test("inserts one approved synthetic path through all 11 tables without outbound
       ('${ids.attempt}', '${ids.business}', '${ids.contact}', '${ids.draft}',
        '${ids.approval}', '${payloadHash}', '${recipientHash}', 'EMAIL',
        'fixture-provider', 'complete-intent', 'INTENT', NULL, NULL,
-       '2026-07-01T07:00:00Z', NULL);
+       clock_timestamp(), NULL);
     INSERT INTO suppressions
       (id, scope_type, scope_hash, reason, source, created_at, active)
     VALUES
