@@ -12,6 +12,6 @@
     "typecheck": "pnpm --workspace-root exec tsc -p packages/database/tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@electric-sql/pglite": "0.5.4"
+    "@electric-sql/pglite": "0.5.5"
   }
 }
