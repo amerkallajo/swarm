@@ -18,7 +18,7 @@
     "typecheck": "pnpm --workspace-root exec tsc -p packages/pilot/tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@electric-sql/pglite": "0.5.4",
+    "@electric-sql/pglite": "0.5.8",
     "@swarm/database": "workspace:*",
     "@swarm/discovery": "workspace:*"
   },
